@@ -21,5 +21,19 @@
  * @return {number[]}
  */
  var twoSum = function(nums, target) {
-    
+    let tempArray = []
+    let remainder
+    for(let i = 0; i < nums.length; i++){
+        remainder = target - nums[i]
+        for(let j = 1; j < nums.length; j++){
+            if(nums[j] === remainder){
+                tempArray.push(i)
+                tempArray.push(j)
+                return tempArray
+            }
+        }
+
+    }
 };
+let nums = [2,7,11,15]
+console.log(twoSum(nums, 9))
