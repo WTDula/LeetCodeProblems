@@ -35,37 +35,39 @@
 
     }
 };
+//test
 let nums = [2,7,11,15]
 console.log(twoSum(nums, 9))
 
-// 3. Longest Substring Without Repeating Characters
-// Given a string s, find the length of the longest substring without repeating characters.
-
- 
+// 9. Palindrome Number
+// Given an integer x, return true if x is palindrome integer.
+// An integer is a palindrome when it reads the same backward as forward.
+//     For example, 121 is a palindrome while 123 is not.
 
 // Example 1:
-
-// Input: s = "abcabcbb"
-// Output: 3
-// Explanation: The answer is "abc", with the length of 3.
-
+// Input: x = 121
+// Output: true
+// Explanation: 121 reads as 121 from left to right and from right to left.
 // Example 2:
-
-// Input: s = "bbbbb"
-// Output: 1
-// Explanation: The answer is "b", with the length of 1.
-
+// Input: x = -121
+// Output: false
+// Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
 // Example 3:
-
-// Input: s = "pwwkew"
-// Output: 3
-// Explanation: The answer is "wke", with the length of 3.
-// Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
-
+// Input: x = 10
+// Output: false
+// Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 /**
- * @param {string} s
- * @return {number}
+ * @param {number} x
+ * @return {boolean}
  */
- var lengthOfLongestSubstring = function(s) {
-    
-};
+ const isPalindrome = (x) => {
+    x = x.toString()
+    let reverseNum = x
+    reverseNum.split("")
+    reverseNum.reverse()
+    reverseNum.join("")
+    reverseNum === x ? "This string is a Palindrome" : "This string is not a Palindrome"
+}
+//test
+console.log(isPalindrome(1221)) //expected true
+console.log(isPalindrome(123)) //expected false
