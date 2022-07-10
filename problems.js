@@ -61,12 +61,19 @@ console.log(twoSum(nums, 9))
  * @return {boolean}
  */
  const isPalindrome = (x) => {
-    x = x.toString()
     let reverseNum = x
-    reverseNum.split("")
-    reverseNum.reverse()
-    reverseNum.join("")
-    reverseNum === x ? "This string is a Palindrome" : "This string is not a Palindrome"
+    x = x.toString()
+    reverseNum = reverseNum.toString().split("").reverse().join("")
+    console.log("x: ", x)
+    console.log("reversedNum: ", reverseNum)
+    console.log("type of x: ", typeof x)
+    console.log("type of rN: ", typeof reverseNum)
+    if(reverseNum === x){
+        return "This string is a Palindrome"
+    }
+    else{
+        return "This string is not a Palindrome"
+    }
 }
 //test
 console.log(isPalindrome(1221)) //expected true
