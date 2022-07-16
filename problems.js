@@ -60,20 +60,20 @@ console.log(twoSum(nums, 9))
  * @param {number} x
  * @return {boolean}
  */
-//  const isPalindrome = (x) => {
-//     let reverseNum = x
-//     x = x.toString()
-//     reverseNum = reverseNum.toString().split("").reverse().join("")
-//     if(reverseNum === x){
-//         return "This number is a Palindrome"
-//     }
-//     else{
-//         return "This number is not a Palindrome"
-//     }
-// }
-// //test
-// console.log(isPalindrome(1221)) //expected true
-// console.log(isPalindrome(123)) //expected false
+ const isPalindrome = (x) => {
+    let reverseNum = x
+    x = x.toString()
+    reverseNum = reverseNum.toString().split("").reverse().join("")
+    if(reverseNum === x){
+        return "This number is a Palindrome"
+    }
+    else{
+        return "This number is not a Palindrome"
+    }
+}
+//test
+console.log(isPalindrome(1221)) //expected true
+console.log(isPalindrome(123)) //expected false
 
 // 13. Roman to Integer
 
@@ -131,3 +131,32 @@ console.log(twoSum(nums, 9))
 //test
 console.log("IV in numerals is: ", romanToInt('IV'))
 console.log("XIX in numerals is: ", romanToInt('XIX'))
+
+// 118. Pascal's Triangle
+
+// Given an integer numRows, return the first numRows of Pascal's triangle.
+// In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
+
+//     1
+//    1 1
+//   1 2 1
+//  1 3 3 1
+// 1 4 6 4 1
+
+// Example 1:
+// Input: numRows = 5
+// Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+// Example 2:
+// Input: numRows = 1
+// Output: [[1]]
+
+// Constraints:
+//     1 <= numRows <= 30
+
+/**
+ * @param {number} numRows
+ * @return {number[][]}
+ */
+ var generate = function(numRows) {
+    
+}
