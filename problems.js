@@ -157,6 +157,23 @@ console.log("XIX in numerals is: ", romanToInt('XIX'))
  * @param {number} numRows
  * @return {number[][]}
  */
- var generate = function(numRows) {
-    
+ var generatePT = function(numRows) {
+    let generateArray = [] //array to be returned
+
+    for(let i = 0; i < numRows; i++){
+        generateArray[i] = new Array(i+1) // new array in generateArray of size i + 1
+        for(let j = 0; j < i + 1; j++){
+            if(j === 0 || j === i){
+                generateArray[i][j] = 1 // if we are at an endpoint, the number will be 1 (0 assumed as one of previous numbers, 1 as other).  Also handles baseline of 1
+            }
+            else {
+                generateArray[i][j] = generateArray[i - 1][j - 1] + generateArray[i - 1][j] //else return addition of previous rows' 2 numbers
+            }
+        } 
+    }
+    return generateArray
 }
+
+//test
+console.log("numRows = 5: ", generatePT(5))
+console.log("numRows = 1: ", generatePT(1))
