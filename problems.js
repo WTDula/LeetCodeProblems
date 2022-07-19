@@ -36,8 +36,8 @@
     }
 };
 //test
-let nums = [2,7,11,15]
-console.log(twoSum(nums, 9))
+// let nums = [2,7,11,15]
+// console.log(twoSum(nums, 9))
 
 // 9. Palindrome Number
 // Given an integer x, return true if x is palindrome integer.
@@ -72,8 +72,8 @@ console.log(twoSum(nums, 9))
     }
 }
 //test
-console.log(isPalindrome(1221)) //expected true
-console.log(isPalindrome(123)) //expected false
+// console.log(isPalindrome(1221)) //expected true
+// console.log(isPalindrome(123)) //expected false
 
 // 13. Roman to Integer
 
@@ -129,8 +129,8 @@ console.log(isPalindrome(123)) //expected false
       return total
 }
 //test
-console.log("IV in numerals is: ", romanToInt('IV'))
-console.log("XIX in numerals is: ", romanToInt('XIX'))
+// console.log("IV in numerals is: ", romanToInt('IV'))
+// console.log("XIX in numerals is: ", romanToInt('XIX'))
 
 // 118. Pascal's Triangle
 
